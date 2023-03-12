@@ -19,6 +19,7 @@ html {
 .box-mems {
     width: 80%;
     margin: 0 auto;
+    /*padding: 0 0.5rem;*/
     background: rgba(158, 154, 163, 0.096);
     height: 100vh;
     cursor: pointer;
@@ -57,7 +58,8 @@ h2{
     height: 1.5rem;
     background: url('/cssBayan/cssBayan/square-plus-solid.svg') no-repeat ;
     transition: 0.5s;
-    display: none;
+    cursor: pointer;
+    
 }
 
 .item-input {
@@ -73,6 +75,7 @@ h2{
     width: 10rem;
     margin: 0 auto;
     transition: 1s;
+    cursor: pointer;
 }
 
 @-webkit-keyframes scaleImg {
@@ -109,12 +112,16 @@ h2{
     background: url('/cssBayan/cssBayan/square-minus-solid.svg') no-repeat;
  }
 
+.item-img:hover {
+    box-shadow: 0 0 0.5rem royalblue;
+}
+
  .box-mems:hover .mem-title {
     color: black;
 } 
   .box-mems:hover .icon {
     display: block;
- } 
+} 
 
 }
 
@@ -124,11 +131,70 @@ h2{
     animation: scaleImg 1s;
 }
 
+.item-input:active ~.title > .item-img {
+    box-shadow: 0 0 2.5rem royalblue;
+}
+
+.item-input:checked ~.title .item-title .icon {
+    background: url('/cssBayan/cssBayan/square-minus-solid.svg') no-repeat;
+}
+
 .item-input:checked ~.title .item-title .icon {
     background: url('/cssBayan/cssBayan/square-minus-solid.svg') no-repeat;
 }
 
 
 
+@media  screen and (max-width: 1920px) { 
+    html {
+        font-size: 1.8rem;
+    }
+
+    h2{
+        font-size: 2.5rem;
+    }
+
+    .mem-title{
+      font-size: 1.5rem;
+    }
+}
+
+@media  screen and (max-width: 820px) { 
+    html {
+        font-size: 1.5rem;
+    }
+    .wrapper {
+        width: 95%;
+    }
+
+    .box-mems {
+        width: 95%;
+    }
+
+    h2{
+        font-size: 1.8rem;
+    }
+
+    .mem-title{
+      font-size: 1.1rem;
+    }
+}
+
+@media  screen and (max-width: 320px) {
+    html {
+        font-size: 1rem;
+    }
+    .wrapper {
+        width: 100%;
+    }
+
+    h2{
+        font-size: 1.5rem;
+    }
+
+    .mem-title{
+      font-size: 1rem;
+    }
+}
 
 
