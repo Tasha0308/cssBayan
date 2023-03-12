@@ -5,7 +5,7 @@
 }
 
 html {
-    background: rgb(243, 241, 241, 0.8);
+    background: rgba(25, 19, 32, 0.096);
     font-size: 1.3rem;
     font-family: 'Inter';
 }
@@ -21,7 +21,6 @@ html {
     height: 100vh;
     margin: 0 auto;
     padding: 0 0.5rem;
-    background: rgba(158, 154, 163, 0.096);
     cursor: pointer;
 }
 
@@ -174,21 +173,6 @@ h2{
 }
 
 
-@media  screen and (max-width: 1520px) { 
-    html {
-        font-size: 1.6rem;
-    }
-
-    h2{
-        font-size: 2rem;
-    }
-
-    .mem-title{
-      font-size: 1.4rem;
-    }
-}
-
-
 @media  screen and (max-width: 820px) { 
     html {
         font-size: 1.5rem;
@@ -210,31 +194,10 @@ h2{
     }
 
     .item-img {
-        width: 6rem;
+        width: 7rem;
        
     }
 
-}
-
-@media  screen and (max-width: 568px) {
-    html {
-        font-size: 0.8rem;
-    }
-    .wrapper {
-        width: 100%;
-    }
-
-    h2{
-        font-size: 1.2rem;
-    }
-
-    .mem-title{
-      font-size: 1.05rem;
-    }
-
-    .item-img {
-        width: 6rem;
-    }
 }
 
 @media  screen and (max-width: 320px) {
