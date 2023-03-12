@@ -72,6 +72,8 @@ h2{
     width: 100%;
     justify-content: center;
     cursor: pointer;
+    gap: 1rem;
+    align-items: center;
 }
 
 
@@ -82,6 +84,22 @@ h2{
     /*margin: 0 auto;*/
     transition: 1s;
     cursor: pointer;
+}
+
+.input-aktive {
+    width: 1rem;
+    height: 1rem;
+}
+
+span {
+    display: none;
+    width: 0.5rem;
+    height: 0.5rem;
+    color:black;
+    border-radius: 50%;
+    border: 0.1rem solid black;
+    background: royalblue;
+    transition: 0.1s;
 }
 
 @-webkit-keyframes scaleImg {
@@ -144,8 +162,8 @@ h2{
 }
 
 
-.item-input:active ~.title .wrapper-img .item-img {
-    box-shadow: 0 0 3rem royalblue;
+.item-input:active ~.title .wrapper-img .input-aktive span {
+    display: block;
 }
 
 .item-input:checked ~.title .item-title .icon {
