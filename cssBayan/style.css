@@ -1,0 +1,134 @@
+@font-face {
+    font-family: 'Inter';
+    src: url("/cssBayan/cssBayan/Font/Inter-Bold.ttf");
+    font-weight: 700;
+}
+
+html {
+    background: rgb(243, 241, 241, 0.8);
+    font-size: 1.3rem;
+    font-family: 'Inter';
+}
+
+.wrapper {
+    width: 65%;
+    margin: 0 auto;
+    height: 100%;
+}
+
+.box-mems {
+    width: 80%;
+    margin: 0 auto;
+    background: rgba(158, 154, 163, 0.096);
+    height: 100vh;
+    cursor: pointer;
+}
+
+h2{
+    font-size: 2.5rem;
+}
+
+.item {
+    width: 100%;
+    border-top: 0.1rem solid rgba(12, 12, 12, 0.034);
+    
+}
+
+.item-title {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  cursor: pointer;
+}
+
+.mem-title{
+    color: royalblue;
+    font-weight: bold;
+    font-size: 1.5rem;
+}
+
+.title {
+    display: block;
+}
+
+
+.icon {
+    width: 1.5rem;
+    height: 1.5rem;
+    background: url('/cssBayan/cssBayan/square-plus-solid.svg') no-repeat ;
+    transition: 0.5s;
+    display: none;
+}
+
+.item-input {
+   appearance: none;
+   display: none;
+
+}
+
+.item-img {
+    display: none;
+    border-radius: 5%;
+    width: 10rem;
+    width: 10rem;
+    margin: 0 auto;
+    transition: 1s;
+}
+
+@-webkit-keyframes scaleImg {
+    0% {
+      -webkit-transform: scale(0.9, 0.9);
+      transform: scale(0.9, 0.9)
+    }
+    100% {
+      -webkit-transform: scale(1.0, 1.0);
+      transform: scale(1.0, 1.0);
+    }
+}
+
+@keyframes scaleImg {
+    0% {
+      -webkit-transform: scale(0.9, 0.9);
+      transform: scale(0.9, 0.9)
+    }
+
+    100% {
+      -webkit-transform: scale(1.0, 1.0);
+      transform: scale(1.0, 1.0);
+    }
+}
+
+@media (hover: hover) {
+  
+.item:hover .item-img{
+    display: block;
+    animation: scaleImg 1s;
+ }
+
+.item:hover .icon {
+    background: url('/cssBayan/cssBayan/square-minus-solid.svg') no-repeat;
+ }
+
+ .box-mems:hover .mem-title {
+    color: black;
+} 
+  .box-mems:hover .icon {
+    display: block;
+ } 
+
+}
+
+
+.item-input:checked ~.title > .item-img {
+    display: block;
+    animation: scaleImg 1s;
+}
+
+.item-input:checked ~.title .item-title .icon {
+    background: url('/cssBayan/cssBayan/square-minus-solid.svg') no-repeat;
+}
+
+
+
+
+
