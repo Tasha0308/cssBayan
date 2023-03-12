@@ -18,8 +18,9 @@ html {
 
 .box-mems {
     width: 80%;
+    height: 100vh;
     margin: 0 auto;
-    /*padding: 0 0.5rem;*/
+    padding: 0 0.5rem;
     background: rgba(158, 154, 163, 0.096);
     height: 100vh;
     cursor: pointer;
@@ -59,6 +60,7 @@ h2{
     background: url('/cssBayan/cssBayan/square-plus-solid.svg') no-repeat ;
     transition: 0.5s;
     cursor: pointer;
+    display: none;
     
 }
 
@@ -67,13 +69,20 @@ h2{
    display: none;
 
 }
+.wrapper-img {
+    display: flex;
+    width: 100%;
+    justify-content: center;
+    cursor: pointer;
+}
+
 
 .item-img {
     display: none;
     border-radius: 5%;
     width: 10rem;
     width: 10rem;
-    margin: 0 auto;
+    /*margin: 0 auto;*/
     transition: 1s;
     cursor: pointer;
 }
@@ -104,7 +113,8 @@ h2{
 @media (hover: hover) {
   
 .item:hover .item-img{
-    display: block;
+    display: flex;
+    justify-content: center;
     animation: scaleImg 1s;
  }
 
@@ -126,13 +136,19 @@ h2{
 }
 
 
-.item-input:checked ~.title > .item-img {
+.item-input:checked ~.title .wrapper-img .item-img  {
     display: block;
     animation: scaleImg 1s;
 }
 
-.item-input:active ~.title > .item-img {
-    box-shadow: 0 0 2.5rem royalblue;
+
+.item-input:checked ~.title .mem-title {
+    color: black;
+}
+
+
+.item-input:active ~.title .wrapper-img .item-img {
+    box-shadow: 0 0 3rem royalblue;
 }
 
 .item-input:checked ~.title .item-title .icon {
