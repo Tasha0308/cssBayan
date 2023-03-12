@@ -84,6 +84,7 @@ h2{
     /*margin: 0 auto;*/
     transition: 1s;
     cursor: pointer;
+    border: 0.2rem solid rgba(25, 19, 32, 0.096);
 }
 
 .input-aktive {
@@ -156,11 +157,19 @@ span {
     animation: scaleImg 1s;
 }
 
+.item-input:active ~.title .wrapper-img .item-img  {
+    border: 0.2rem solid royalblue;
+}
+
 
 .item-input:checked ~.title .mem-title {
     color: black;
 }
 
+
+.item-input:active ~.title .mem-title {
+    color: royalblue;
+}
 
 .item-input:active ~.title .wrapper-img .input-aktive span {
     display: block;
